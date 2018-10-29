@@ -1,0 +1,49 @@
+mat-toolbar.mat-toolbar.top-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+
+  mat-toolbar-row {
+    padding: 0 16px 0 0;
+  }
+
+  mat-icon {
+    color: #FFFFFF;
+  }
+}
+
+mat-sidenav.mat-sidenav.sidenav {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  min-width: 200px;
+  background-color: #FAFAFA;
+  box-shadow: 6px 0 6px rgba(0,0,0,0.10);
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #97b4c1;
+  }
+}
+
+mat-sidenav-container.sidenav-container {
+  min-height: 100%;
+  height: auto !important;
+  max-width: 100%;
+  margin: 0;
+  transform: none;
+}
+
+mat-sidenav-content.mat-sidenav-content {
+  box-sizing: border-box;
+  padding: 65px 13px 13px;
+  min-height: 100vh;
+}

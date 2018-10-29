@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './styles/custom-theme.scss';
+
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #97b4c1;
+    outline: #333 solid 1px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  }
+}

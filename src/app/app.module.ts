@@ -3,18 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
+import { CoreModule } from './core/core.module';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    CoreModule,
+    LayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
